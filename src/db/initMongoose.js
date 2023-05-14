@@ -1,8 +1,9 @@
 "use strict";
 import mongoose from "mongoose";
 import { countConnect } from "../helpers/checkConnect.js";
+import { devConfig } from "../configs/mongodbConfig.js";
 
-const connectString = "mongodb://127.0.0.1/shopDEV";
+const connectString = `mongodb://${devConfig.host}/${devConfig.dbName}`;
 
 class Database {
 	constructor() {
